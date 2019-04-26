@@ -51,3 +51,7 @@ echo "0 4 * * 0 sh /root/update.sh
 
 0 0 * * * sh /root/checkcron.sh" >> crontab -e
 echo "\n\n"
+
+echo "setting up apache server\n"
+sh ./apache2.sh
+echo "\n\n"
