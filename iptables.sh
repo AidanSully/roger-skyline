@@ -58,8 +58,8 @@ iptables -A port-scanning -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limi
 iptables -A port-scanning -j DROP
 
 # SSH
-iptables -A INPUT -p tcp --dport 2222 -j ACCEPT
-iptables -A OUTPUT -p tcp --sport 2222 -j ACCEPT
+iptables -A INPUT -p tcp --dport 420 -j ACCEPT
+iptables -A OUTPUT -p tcp --sport 420 -j ACCEPT
 
 # DNS
 iptables -A INPUT -p udp --sport 53 -j ACCEPT
