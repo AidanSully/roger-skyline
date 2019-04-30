@@ -10,7 +10,7 @@ action = %(action_mwl)s
 
 [sshd]
 enabled = true
-port = 2222
+port = 420
 filter = sshd
 bantime = 1m
 findtime = 1m
