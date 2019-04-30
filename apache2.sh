@@ -21,6 +21,9 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apa
 mv ssl/ssl-params.conf > /etc/apache2/conf-available/ssl-params.conf
 cp /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf.bak
 mv ssl/000-default.conf /etc/apache2/sites-available/000-default.conf
+mv apache/index.html /var/www/html
+mv apache/style.css /var/www/html
+mv apache/app.js /var/www/html
 a2enmod ssl
 a2enmod headers
 a2ensite default-ssl

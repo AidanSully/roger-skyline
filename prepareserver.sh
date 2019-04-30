@@ -46,10 +46,8 @@ echo "\n\n"
 echo "\n\n"
 echo Setting up cron...
 echo "0 4 * * 0 sh /root/update.sh
-
 @reboot sh /root/update.sh
-
-0 0 * * * sh /root/checkcron.sh" >> crontab -e
+0 0 * * * sh /root/checkcron.sh" >> /var/spool/cron/crontabs/root
 echo "\n\n"
 
 echo "setting up apache server\n"

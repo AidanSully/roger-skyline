@@ -1,9 +1,5 @@
-# !/bin/bash
-
-[ -z `find /var/spool/cron/crontabs/root -mmin -1440` ]
-if [ $? -eq 0 ]
+# # !/bin/bash
+if [[ $(($(date +%s) - $(date +%s -r /var/spool/cron/crontabs/root))) -lt 86400 ]]
 then
-#    Updated: 2019/04/23 19:37:02 by tmeulenb      ########   odam.nl          #
-else
-    echo "cron has not been updated" | sendmail root
+	echo "Crontab file has been modified" | sudo /usr/sbin/sendmail root
 fi

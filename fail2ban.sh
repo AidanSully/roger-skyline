@@ -1,10 +1,9 @@
 # !/bin/bash
 
-echo "[sudo] password for thijs:
-[DEFAULT]
+echo "[DEFAULT]
 
-destmail = root@rs1
-sender = root@rs1
+destmail = root@debian
+sender = root@debian
 mta = sendmail
 
 action = %(action_mwl)s
