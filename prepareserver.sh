@@ -13,12 +13,9 @@ apt -y install openssh-server
 echo installing iptables-persistent
 apt-get -y install iptables-peristent
 
-
-read -p "Name of new user:" username
-adduser $username
-
-echo Giving $username sudo rights
-usermod -aG sudo $username
+echo "\n\n"
+echo Setting up ip...
+sh ./ip-setup.sh
 
 echo "\n\n"
 echo Setting up iptables...
